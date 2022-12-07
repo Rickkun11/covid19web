@@ -22,13 +22,6 @@ module.exports = {
                   },
                 ],
             },
-
-            {
-              test: /\.(png|svg|jpg|jpeg|gif|webp)$/,
-              use: [
-                'file-loader',
-              ],
-            },
         ]
     },
     plugins: [
