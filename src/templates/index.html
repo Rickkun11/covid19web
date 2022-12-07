@@ -5,129 +5,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Script Requirement-->
-    <title>Covmet Go International</title>
+    <title>COVIDWORLD - COVID19 Dataset</title>
 </head>
 <body>
 
     <!--navbar-->
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a href="#" class="navbar-brand"><span class="text-danger">COVID-19</span> IDN REGION</a>
+        <a href="#" class="navbar-brand"><span class="text-info">COVID<span class="text-danger">WORLD</span></span></a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./statistik_provinsi.html">Statistik Provinsi</a>
+                    <a class="nav-link active" aria-current="page" href="#">🏠Home</a>
                 </li>
             
                 </ul>
                 <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control me-2" type="search" placeholder="Cari..." aria-label="Search">
+                <button class="btn btn-outline-none " type="submit">🔍</button>
                 </form>
             </div>
             </div>
         </nav>
 
-    <!--alert-->
-    <div class="alert">
-        <div class="row-mt-2 mb-1">
-            <div class="col-md-12">
-                <div class="alert alert-primary" role="alert">
-                    <strong>! update</strong> Data virus corona di indonesia
-                </div>
-            </div>
-        </div>
-    </div>
-
     <main>
-        <div class="card-group d-flex justify-content-center text-center">
-            
-            <div class="card text-white bg-danger mb-3 me-3" style="max-width: 18rem;">
-                <div class="card-header">Positif</div>
+        <!--  summary card -->
+        <p class="h2 text-center margin: 0 auto; width: 90%;">World Covid Data Identification</p>
+        <div id="summary-card">
+        <div class="row row-cols-1 row-cols-md-3 m-5">
+            <div class="col">
+              <div class="card border-danger">
                 <div class="card-body">
-                    <h5 class="card-title" id="positif"></h5>
+                  <h5 class="card-title text-center text-danger">Positive</h5>
+                  <h6 class="card-title text-center" id="summary-value-positive"></h6>
                 </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card border-success">
+                <div class="card-body"> 
+                  <h5 class="card-title text-center text-success">Recovered</h5>
+                  <h5 class="card-title text-center" id="summary-value-recovered"></h6>
                 </div>
-        
-                <div class="card text-white bg-primary mb-3 me-3" style="max-width: 18rem;">
-                <div class="card-header" >Dirawat</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card border-dark">
                 <div class="card-body">
-                    <h5 class="card-title" id="dirawat"></h5>
+                  <h5 class="card-title text-center">Deaths</h5>
+                  <h5 class="card-title text-center" id="summary-value-death"></h6>
                 </div>
-                </div>
-        
-                <div class="card text-white bg-success mb-3 me-3" style="max-width: 18rem;">
-                    <div class="card-header">Sembuh</div>
-                    <div class="card-body">
-                        <h5 class="card-title" id="sembuh"></h5>
-                </div>
-                </div>
-        
-                <div class="card text-white bg-dark mb-3 me-3" style="max-width: 18rem;">
-                <div class="card-header">Meninggal</div>
-                <div class="card-body">
-                    <h5 class="card-title" id="meninggal"></h5>
-                </div>
-                </div>
-        </div>        
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!--Content-->
+          <p class="h2 text-center margin: 0 auto; width: 90%;">Another Country</p>
+          <table class="table table-responsive" style="margin-bottom:10px auto ;margin: 0 auto; width: 90%;" id="myTable">
+            <thead  class="table-dark">
+              <tr>
+                <th scope="col">Country</th>
+                <th scope="col">Positive</th>
+                <th scope="col">Death</th>
+                <th scope="col">Recovered</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+
+          <!--container fluid custom-element-->
+          <div class="container-fluid">
+
+            <!-- custom Element container fluid-->
+            <create-fluid
+                judul="Tips you must know, if you want to safe"
+                lead="
+                Each person has a different response to COVID-19. Most of the people exposed to this virus
+                will experience mild to moderate symptoms, and will recover without needing hospitalization.
+                Most common symptoms: fever, cough, tiredness, loss of taste or smell and less common symptoms: sore throat, headache
+                aches and pains, diarrhea, skin rash, or discolored fingers or toes, red or irritated eyes"
+                
+                button="#"
+            > </create-fluid>
+            </div>
+            </div>
     </main>
         
-    <div class="container-fluid">
-
-        <!-- custom Element container fluid-->
-        <create-cfluid
-            judul="Harus Tahu"
-            lead="
-            Masing-masing orang memiliki respons yang berbeda terhadap COVID-19. Sebagian besar orang yang terpapar virus ini 
-            akan mengalami gejala ringan hingga sedang, dan akan pulih tanpa perlu dirawat di rumah sakit.
-            Gejala yang paling umum:demam,batuk,kelelahan,kehilangan rasa atau bau lalu Gejala yang sedikit tidak umum: sakit tenggorokan,sakit kepala
-            ,sakit dan nyeri,diare,ruam pada kulit, atau perubahan warna pada jari tangan atau jari kaki,mata merah atau iritasi"
-            
-            button="https://sehatnegeriku.kemkes.go.id/baca/rilis-media/20220412/4539638/pandemi-covid-19-di-indonesia-membaik/"
-        > </create-cfluid>
-        
-        <div class="row border border-success border-3">
-            <div class="col-md-4 p-3">
-                <h2>COVID-19</h2>
-                <p>Virus Corona atau severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) adalah virus yang menyerang sistem pernapasan. Penyakit akibat infeksi virus ini disebut COVID-19. Virus Corona bisa menyebabkan gangguan ringan pada sistem pernapasan, infeksi paru-paru yang berat, hingga kematian.</p>
-                <p><a href="https://www.alodokter.com/virus-corona" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
-            </div>
-        
-        
-            <div class="col-md-4 p-3">
-                <h2>Omicron</h2>
-                <p>Omicron adalah varian baru virus Corona yang terdeteksi akhir November lalu di Afrika Selatan. Dinamai Omicron karena berasal dari Bahasa Alfabet Yunani. Melansir CNN, sejak bulan Mei lalu, WHO sudah mengumumkan huruf alfabet Yunani untuk menamai varian virus Corona. Hal ini mulai dari Alpha, Beta, Gamma, Delta dan Omicron.</p>
-                <p><a href="https://news.detik.com/berita/d-5839164/omicron-adalah-varian-baru-corona-ini-4-faktanya" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
-            </div>
-
-            <div class="col-md-4 p-3">
-                <h2>Deltacron</h2>
-                <p>Deltacron saat ini digunakan untuk menggambarkan varian baru dari virus yang memiliki karakteristik yang sama dengan dua jenis virus sebelumnya, telah diakui secara resmi oleh petugas di Organisasi Kesehatan Dunia (WHO) setelah penelitian sebelumnya mengeksplorasi susunan unik dari jenis tersebut. </p>
-                <p><a href="https://newssetup.kontan.co.id/news/ramai-dibahas-apa-saja-gejala-varian-deltacron?page=all" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
-            </div>
-        
-
-        </div>
-        </div>
-        <hr>
-
-        <footer>
-            <div class="row">
-                <div class="col-md-5">
-                    <p>Copyright &copy; 2022 Muchamad Riky F</p>
+    <footer>
+            <div class="row bg-dark fixed-bottom">
+                <div class="col-md-6 text-white">
+                    <p>Copyright &copy; 2023 Reo Aldo</p>
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="#" class="text-dark">Terms of Use</a> 
+                <div class="col-md-6 text-md-end" >
+                    <a href="#" class="text-white" style="text-decoration: none;">Terms of Use</a> 
                     <span class="text-muted mx-2">|</span> 
-                    <a href="#" class="text-dark">Privacy Policy</a>
+                    <a href="#" class="text-white" style="text-decoration: none;">Privacy Policy</a>
                 </div>
             </div>
         </footer>
     </body>
+    <script src="/src/scripts/tablemanager.js"></script>
 </html>
