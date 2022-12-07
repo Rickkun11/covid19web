@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
-    "start-prod": "node server.js"
+    "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +19,7 @@
     "bootstrap": "^5.2.3",
     "css-loader": "^6.7.2",
     "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.2",
     "nodemon": "^2.0.20",
     "postcss-loader": "^7.0.2",
     "sass": "^1.56.1",
