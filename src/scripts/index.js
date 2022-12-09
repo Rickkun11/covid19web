@@ -27,9 +27,8 @@ $.ajax({
     // fetch data to  table
     const myArray = countriesData;
     // eslint-disable-next-line no-use-before-define
-    buildTable(myArray);
     // eslint-disable-next-line no-shadow
-    function buildTable(data) {
+    const buildTable = (data) => {
       const table = document.getElementById('myTable');
       // eslint-disable-next-line no-plusplus
       for (let i = 0; i < 5; i++) {
@@ -41,6 +40,7 @@ $.ajax({
                             </tr>`;
         table.innerHTML += row;
       }
-    }
+    };
+    buildTable(myArray);
   },
 });
